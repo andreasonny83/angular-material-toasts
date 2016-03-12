@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('ngMaterialToast', [])
+    .module('ngMaterialToasts', [])
     .factory('materialToast', materialToast);
 
   // factory.$inject = ['dependencies'];

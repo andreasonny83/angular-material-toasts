@@ -2,16 +2,16 @@
 
 /**
  * @ngdoc overview
- * @name angularMaterialToastApp
+ * @name angularMaterialToastsApp
  * @description
- * # angularMaterialToastApp
+ * # angularMaterialToastsApp
  *
  * Main module of the application.
  */
 angular
-  .module('angularMaterialToastApp', [
+  .module('angularMaterialToastsApp', [
     'ngRoute',
-    'ngMaterialToast'
+    'ngMaterialToasts'
   ])
   .config(function ($routeProvider) {
     $routeProvider

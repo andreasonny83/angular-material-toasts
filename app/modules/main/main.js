@@ -3,13 +3,13 @@
 
   /**
    * @ngdoc function
-   * @name angularMaterialToastApp.controller:MainCtrl
+   * @name angularMaterialToastsApp.controller:MainCtrl
    * @description
    * # MainCtrl
-   * Controller of the angularMaterialToastApp
+   * Controller of the angularMaterialToastsApp
    */
 
-  angular.module('angularMaterialToastApp')
+  angular.module('angularMaterialToastsApp')
     .controller('MainCtrl', MainCtrl);
 
   MainCtrl.$inject = ['$scope', 'materialToast'];

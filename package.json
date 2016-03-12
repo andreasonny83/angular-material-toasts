@@ -1,5 +1,5 @@
 {
-  "name": "angular-material-toast",
+  "name": "angular-material-toasts",
   "private": true,
   "devDependencies": {
     "del": "^2.2.0",

@@ -51,7 +51,7 @@ gulp.task('open', function(){
 
 gulp.task('start:server', ['open'], function() {
   $.connect.server({
-    root: ['app'],
+    root: ['app', '.tmp'],
     port: 9000,
     livereload: true,
     middleware: function(connect) {
@@ -63,7 +63,7 @@ gulp.task('start:server', ['open'], function() {
 });
 
 gulp.task('scripts', function() {
-  return gulp.src('src/angular-material-toast/**/*.js')
+  return gulp.src('src/angular-material-toasts/**/*.js')
     .pipe($.jshint())
     .pipe($.jshint.reporter(stylish))
     .pipe($.uglify({
@@ -77,7 +77,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('styles', function() {
-  return gulp.src('src/angular-material-toast/**/*.scss')
+  return gulp.src('src/angular-material-toasts/**/*.scss')
     .pipe($.sass().on('error', $.sass.logError))
     .pipe($.cssnano({
       autoprefixer: {browsers: supported, add: true},
@@ -90,6 +90,12 @@ gulp.task('styles', function() {
     .pipe(gulp.dest('dist'));
 });
 
+gulp.task('styles:dev', function() {
+  return gulp.src('src/angular-material-toasts/**/*.scss')
+    .pipe($.sass().on('error', $.sass.logError))
+    .pipe(gulp.dest('.tmp'));
+});
+
 gulp.task('html', function () {
   gulp.src('./app/*.html')
     .pipe($.connect.reload());
@@ -97,13 +103,14 @@ gulp.task('html', function () {
 
 gulp.task('watch', function () {
   gulp.watch(['./app/**/*.html', './app/styles/main.css'], ['html']);
-  gulp.watch(['./src/angular-material-toast/**/*.css'], ['styles']);
-  gulp.watch(['./src/angular-material-toast/**/*.js'], ['scripts']);
+  gulp.watch(['./src/angular-material-toasts/**/*.css'], ['styles:dev']);
+  gulp.watch(['./src/angular-material-toasts/**/*.js'], ['scripts']);
 });
 
 gulp.task('serve', function(cb) {
   runSequence(
     'clean',
+    ['scripts', 'styles:dev'],
     'start:server',
     'watch',
     cb

@@ -1,14 +1,13 @@
 {
-  "name": "angular-material-toast",
+  "name": "angular-material-toasts",
   "description": "Cool material toasts for your AngularJS app",
   "version": "0.0.2",
   "main": [
-    "dist/angular-material-toast.js",
-    "dist/angular-material-toast.css"
+    "dist/angular-material-toasts.min.js",
+    "dist/angular-material-toasts.min.css"
   ],
   "dependencies": {
-    "angular": "^1.5.0",
-    "angular-route": "^1.5.0"
+    "angular": "*"
   },
   "devDependencies": {
     "angular-mocks": "^1.5.0"
@@ -24,11 +23,9 @@
   "keywords": [
     "angular",
     "toast",
+    "toasts",
     "notifications"
   ],
-  "dependencies": {
-    "angular": "*"
-  },
   "authors": [
     "Andrea Sonny <andreasonny83@gmail.com>"
   ],
@@ -37,5 +34,5 @@
     "node_modules",
     "bower_components"
   ],
-  "moduleName": "AngularMaterialToast"
+  "moduleName": "AngularMaterialToasts"
 }

@@ -1,4 +1,4 @@
-# Angular Material Toast
+# Angular Material Toasts
 
 [![Bower version](https://badge.fury.io/bo/angular-material-toasts.svg)](https://badge.fury.io/bo/angular-material-toasts)
 
@@ -16,7 +16,7 @@ Install the library with [Bower](http://bower.io/) or download the the files dir
 
 Include `dist/angular-material-toasts.min.js` and `dist/angular-material-toasts.min.css` to your AngularJS project.
 
-Add `ngMaterialToast` as a module dependency for your module.
+Add `ngMaterialToasts` as a module dependency for your module.
 
     angular.module('myApp', ['materialToast']);
 
