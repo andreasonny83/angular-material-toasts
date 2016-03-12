@@ -1,6 +1,6 @@
 # Angular Material Toast
 
-[![Bower version](https://badge.fury.io/bo/angular-material-toast.svg)](https://badge.fury.io/bo/angular-material-toast)
+[![Bower version](https://badge.fury.io/bo/angular-material-toasts.svg)](https://badge.fury.io/bo/angular-material-toasts)
 
 Cool material toasts for your AngularJS app
 
