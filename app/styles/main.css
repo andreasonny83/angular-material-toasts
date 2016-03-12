@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.jumbotron {
+  background: #333;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+
+  color: #eee;
+  border-radius: 3px;
+}
+
+.jumbotron img {
+  margin: 20px 0;
+}
+.jumbotron .lead {
+  color: #ddd;
+}

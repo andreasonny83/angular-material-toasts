@@ -1,0 +1,41 @@
+{
+  "name": "angular-material-toast",
+  "description": "Cool material toasts for your AngularJS app",
+  "version": "0.0.1",
+  "main": [
+    "dist/angular-material-toast.js",
+    "dist/angular-material-toast.css"
+  ],
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angular-route": "^1.5.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.5.0"
+  },
+  "homepage": "https://github.com/andreasonny83/angular-material-toasts",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/andreasonny83/angular-material-toasts.git"
+  },
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "angular",
+    "toast",
+    "notifications"
+  ],
+  "dependencies": {
+    "angular": "*"
+  },
+  "authors": [
+    "Andrea Sonny <andreasonny83@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "node_modules",
+    "bower_components"
+  ],
+  "moduleName": "AngularMaterialToast"
+}

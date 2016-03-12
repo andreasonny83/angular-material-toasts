@@ -1,0 +1,32 @@
+.ng-material-toast {
+  box-sizing: border-box;
+  outline: none;
+  z-index: 999;
+
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  margin: 12px;
+  padding: 16px 24px;
+
+  font-size: 14px;
+  font-family: 'Roboto', 'Noto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #eee;
+
+  background-color: #333;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  opacity: 0;
+
+  cursor: default;
+  border-radius: 2px;
+  transform: translateY(100px);
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.ng-material-toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
