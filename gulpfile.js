@@ -83,6 +83,9 @@ gulp.task('styles', function() {
       autoprefixer: {browsers: supported, add: true},
       safe: true
     }))
+    .pipe($.rename({
+      suffix: '.min'
+    }))
     .pipe($.header('/*!<%= header %> */\n', {header: header}))
     .pipe(gulp.dest('dist'));
 });
