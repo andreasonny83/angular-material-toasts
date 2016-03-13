@@ -16,6 +16,7 @@ var del = require('del');
 var runSequence = require('gulp-run-sequence');
 var openURL = require('open');
 var stylish = require('jshint-stylish');
+var Server = require('karma').Server;
 
 var supported = [
   'last 2 versions',
@@ -105,6 +106,16 @@ gulp.task('watch', function () {
   gulp.watch(['./app/**/*.html', './app/styles/main.css'], ['html']);
   gulp.watch(['./src/angular-material-toasts/**/*.css'], ['styles:dev']);
   gulp.watch(['./src/angular-material-toasts/**/*.js'], ['scripts']);
+});
+
+/**
+ * Run test once and exit
+ */
+gulp.task('test', function (done) {
+  new Server({
+    configFile: __dirname + '/karma.conf.js',
+    singleRun: true
+  }, done).start();
 });
 
 gulp.task('serve', function(cb) {

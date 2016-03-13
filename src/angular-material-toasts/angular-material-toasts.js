@@ -1,20 +1,19 @@
 (function() {
   'use strict';
 
-  angular
-    .module('ngMaterialToasts', [])
-    .factory('materialToast', materialToast);
+  angular.module('ngMaterialToasts', [])
+    .factory('materialToast', materialToast)
+    .value('version', '0.0.2');
 
   // factory.$inject = ['dependencies'];
 
   /* @ngInject */
   function materialToast() {
-    var vm = this;
-
-    vm.count = false;
+    var count = false;
 
     var service = {
-          show: show
+          show: createToast,
+          count: count
         };
 
     init();
@@ -42,7 +41,7 @@
       // if another toast is already visible, kill it!
       if (classes.indexOf('show') !== -1) {
         toast.classList.remove('show');
-        vm.count = !true;
+        service.count = !true;
       }
 
       if (reCreate === true) {
@@ -64,28 +63,24 @@
         timeOut: _options.timeOut || 4000
       };
 
-      if (vm.count) {
+      if (service.count) {
         return killToast(true, bodyCopy, options);
       }
 
       body.textContent = options.bodyCopy;
 
-      vm.count = true;
+      service.count = true;
       toast.classList.add('show');
 
-      if (vm.timeoutID) {
-        window.clearTimeout(vm.timeoutID);
+      if (service.timeoutID) {
+        window.clearTimeout(service.timeoutID);
       }
 
       if (! options.persist) {
-        vm.timeoutID = window.setTimeout(function () {
+        service.timeoutID = window.setTimeout(function () {
           killToast();
         }, options.timeOut);
       }
-    }
-
-    function show(bodyCopy, options) {
-      createToast(bodyCopy, options);
     }
   }
 
