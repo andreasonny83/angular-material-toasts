@@ -13,7 +13,7 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var del = require('del');
-var runSequence = require('gulp-run-sequence');
+var runSequence = require('run-sequence');
 var openURL = require('open');
 var stylish = require('jshint-stylish');
 var Server = require('karma').Server;
@@ -64,7 +64,10 @@ gulp.task('start:server', ['open'], function() {
 });
 
 gulp.task('scripts', function() {
-  return gulp.src('src/angular-material-toasts/**/*.js')
+  return gulp.src([
+      'src/angular-material-toasts/**/*.js',
+      '!src/angular-material-toasts/test/**/*'
+    ])
     .pipe($.jshint())
     .pipe($.jshint.reporter(stylish))
     .pipe($.uglify({
@@ -121,7 +124,8 @@ gulp.task('test', function (done) {
 gulp.task('serve', function(cb) {
   runSequence(
     'clean',
-    ['scripts', 'styles:dev'],
+    'styles:dev',
+    'scripts',
     'start:server',
     'watch',
     cb
@@ -131,7 +135,8 @@ gulp.task('serve', function(cb) {
 gulp.task('default', function(cb) {
   runSequence(
     'clean',
-    ['scripts', 'styles'],
+    'styles',
+    'scripts',
     cb
   );
 });

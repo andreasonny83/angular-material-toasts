@@ -9,9 +9,7 @@
     "gulp-header": "^1.7.1",
     "gulp-jshint": "^2.0.0",
     "gulp-load-plugins": "^1.2.0",
-    "gulp-open": "^1.0.0",
     "gulp-rename": "^1.2.2",
-    "gulp-run-sequence": "^0.3.2",
     "gulp-sass": "^2.2.0",
     "gulp-uglify": "^1.5.3",
     "jasmine-core": "^2.4.1",
@@ -20,7 +18,9 @@
     "karma": "^0.13.22",
     "karma-jasmine": "^0.3.7",
     "karma-phantomjs-launcher": "^1.0.0",
-    "phantomjs-prebuilt": "^2.1.5"
+    "open": "0.0.5",
+    "phantomjs-prebuilt": "^2.1.5",
+    "run-sequence": "^1.1.5"
   },
   "engines": {
     "node": ">=0.10.0"
