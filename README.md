@@ -17,6 +17,15 @@ Install the library with [Bower](http://bower.io/) or download the the files dir
 ### Usage
 
 Include `dist/angular-material-toasts.min.js` and `dist/angular-material-toasts.min.css` to your AngularJS project.
+There is also an online distribution version you can include, if you don't want to install your local dependecies, available at:
+
+    http://sonnywebdesign.com/angular-material-toasts/angular-material-toasts.min.css
+    http://sonnywebdesign.com/angular-material-toasts/angular-material-toasts.min.js
+
+So your index.html should look like this:
+
+    <link rel="stylesheet" href="//sonnywebdesign.com/angular-material-toasts/angular-material-toasts.min.css">
+    <script src="//sonnywebdesign.com/angular-material-toasts/angular-material-toasts.min.js"></script>
 
 Add `ngMaterialToasts` as a module dependency for your module.
 
