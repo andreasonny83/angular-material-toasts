@@ -2,6 +2,7 @@
 
 [![Bower version](https://badge.fury.io/bo/angular-material-toasts.svg)](https://badge.fury.io/bo/angular-material-toasts)
 [![Build Status](https://travis-ci.org/andreasonny83/angular-material-toasts.svg?branch=master)](https://travis-ci.org/andreasonny83/angular-material-toasts)
+[![devDependency Status](https://david-dm.org/andreasonny83/angular-material-toasts/dev-status.svg)](https://david-dm.org/andreasonny83/angular-material-toasts#info=devDependencies)
 
 Cool material toasts for your AngularJS app
 
