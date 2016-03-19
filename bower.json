@@ -1,13 +1,15 @@
 {
   "name": "angular-material-toasts",
   "description": "Cool material toasts for your AngularJS app",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": [
     "dist/angular-material-toasts.min.js",
     "dist/angular-material-toasts.min.css"
   ],
   "dependencies": {
-    "angular": "*"
+    "angular": "^1.5.0",
+    "angular-route": "^1.5.0",
+    "angular-mocks": "^1.5.0"
   },
   "devDependencies": {
     "angular-mocks": "^1.5.0"

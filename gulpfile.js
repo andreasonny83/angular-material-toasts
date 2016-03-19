@@ -4,7 +4,6 @@
  *
  * @author Andrea SonnY <andreasonny83@gmail.com>
  * @copyright 2016 Andrea SonnY <andreasonny83@gmail.com>
- * @version v0.0.1
  * @license MIT http://andreasonny.mit-license.org
  */
 
@@ -13,9 +12,10 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var del = require('del');
-var runSequence = require('gulp-run-sequence');
+var runSequence = require('run-sequence');
 var openURL = require('open');
 var stylish = require('jshint-stylish');
+var Server = require('karma').Server;
 
 var supported = [
   'last 2 versions',
@@ -63,7 +63,10 @@ gulp.task('start:server', ['open'], function() {
 });
 
 gulp.task('scripts', function() {
-  return gulp.src('src/angular-material-toasts/**/*.js')
+  return gulp.src([
+      'src/angular-material-toasts/**/*.js',
+      '!src/angular-material-toasts/test/**/*'
+    ])
     .pipe($.jshint())
     .pipe($.jshint.reporter(stylish))
     .pipe($.uglify({
@@ -107,10 +110,21 @@ gulp.task('watch', function () {
   gulp.watch(['./src/angular-material-toasts/**/*.js'], ['scripts']);
 });
 
+/**
+ * Run test once and exit
+ */
+gulp.task('test', function (done) {
+  new Server({
+    configFile: __dirname + '/karma.conf.js',
+    singleRun: true
+  }, done).start();
+});
+
 gulp.task('serve', function(cb) {
   runSequence(
     'clean',
-    ['scripts', 'styles:dev'],
+    'styles:dev',
+    'scripts',
     'start:server',
     'watch',
     cb
@@ -120,7 +134,8 @@ gulp.task('serve', function(cb) {
 gulp.task('default', function(cb) {
   runSequence(
     'clean',
-    ['scripts', 'styles'],
+    'styles',
+    'scripts',
     cb
   );
 });
