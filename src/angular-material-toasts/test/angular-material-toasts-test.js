@@ -19,7 +19,7 @@ describe('Factory: materialToast', function () {
   });
 
   it('The materialToast factory should run the latest version', inject(function(version) {
-    expect(version).toEqual('0.0.3');
+    expect(version).toEqual('0.0.4');
   }));
 
   it('Once the app starts, there should be no active nofitications', function () {

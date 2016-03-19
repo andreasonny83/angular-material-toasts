@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.0.4 - 2016-03-19
+- Some dependencies issue resolved
+
 ## 0.0.3 - 2016-03-19
 - TravisCI for continuous integration
 - Karma file introduced for unit tests
