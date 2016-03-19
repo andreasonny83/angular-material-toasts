@@ -1,7 +1,7 @@
 {
   "name": "angular-material-toasts",
   "description": "Cool material toasts for your AngularJS app",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": [
     "dist/angular-material-toasts.min.js",
     "dist/angular-material-toasts.min.css"
