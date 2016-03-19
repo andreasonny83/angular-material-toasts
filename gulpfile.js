@@ -4,7 +4,6 @@
  *
  * @author Andrea SonnY <andreasonny83@gmail.com>
  * @copyright 2016 Andrea SonnY <andreasonny83@gmail.com>
- * @version v0.0.1
  * @license MIT http://andreasonny.mit-license.org
  */
 

@@ -3,7 +3,7 @@
 
   angular.module('ngMaterialToasts', [])
     .factory('materialToast', materialToast)
-    .value('version', '0.0.2');
+    .value('version', '0.0.3');
 
   // factory.$inject = ['dependencies'];
 
