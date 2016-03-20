@@ -29,7 +29,7 @@ So your index.html should look like this:
 
 Add `ngMaterialToasts` as a module dependency for your module.
 
-    angular.module('myApp', ['materialToast']);
+    angular.module('myApp', ['ngMaterialToasts']);
 
 Then inject and use the `materialToast` service.
 
