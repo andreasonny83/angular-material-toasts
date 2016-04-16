@@ -4,6 +4,8 @@
 [![Build Status](https://travis-ci.org/andreasonny83/angular-material-toasts.svg?branch=master)](https://travis-ci.org/andreasonny83/angular-material-toasts)
 [![devDependency Status](https://david-dm.org/andreasonny83/angular-material-toasts/dev-status.svg)](https://david-dm.org/andreasonny83/angular-material-toasts#info=devDependencies)
 
+<img src="http://benschwarz.github.io/bower-badges/badge@2x.png" width="130" height="30">
+
 Cool material toasts for your AngularJS app
 
 Click [here](https://jsbin.com/momuke/edit?html,output) to see the plug-in in action inside an interactive AngularJS Demo project.
